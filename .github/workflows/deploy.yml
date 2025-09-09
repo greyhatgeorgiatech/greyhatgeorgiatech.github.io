@@ -40,8 +40,6 @@ jobs:
     - name: Build site
       run: |
         echo "Static site - ensuring all files are ready for deployment"
-        # Copy any additional files if needed
-        cp README.md ./
         # Ensure all static files are in place
         ls -la
         
