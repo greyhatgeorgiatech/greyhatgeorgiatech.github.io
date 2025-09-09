@@ -39,14 +39,36 @@ jobs:
       
     - name: Build site
       run: |
-        echo "Static site - ensuring all files are ready for deployment"
-        # Ensure all static files are in place
-        ls -la
+        echo "Static site - preparing files for deployment"
+        # Create a clean deployment directory
+        mkdir -p _site
+        # Copy only the necessary static files
+        cp -r *.html _site/ 2>/dev/null || true
+        cp -r css _site/
+        cp -r js _site/
+        cp -r images _site/
+        cp -r fonts _site/
+        cp -r about _site/
+        cp -r archives _site/
+        cp -r conference _site/
+        cp -r ctf _site/
+        cp -r discord _site/
+        cp -r meetings _site/
+        cp -r posts _site/
+        cp -r sponsors _site/
+        cp -r tags _site/
+        cp -r team _site/
+        cp -r weekly_puzzle _site/
+        cp -r 2018 _site/
+        # Copy README if it exists
+        cp README.md _site/ 2>/dev/null || true
+        echo "Files ready for deployment:"
+        ls -la _site/
         
     - name: Upload artifact
       uses: actions/upload-pages-artifact@v3
       with:
-        path: '.'
+        path: '_site'
         
     - name: Deploy to GitHub Pages
       id: deployment
