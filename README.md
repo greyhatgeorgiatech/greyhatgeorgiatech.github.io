@@ -24,3 +24,35 @@ $ npm install
 # deployment one-liner
 $ hexo clean && hexo generate && cp README.md public/ && cp index.html public/ && hexo deploy
 ```
+
+## Deployment
+
+This site is automatically deployed to GitHub Pages when you push to the `master` branch.
+
+### Manual Deployment
+```bash
+# Make changes to your site
+# Add and commit changes
+git add .
+git commit -m "Your commit message"
+git push origin master
+
+# The site will automatically deploy via GitHub Actions
+# Check the Actions tab in your GitHub repository for deployment status
+```
+
+### Local Development
+```bash
+# Install dependencies
+npm install
+
+# Serve locally
+npm run dev
+# or
+npm start
+
+# Site will be available at http://localhost:4000
+```
+
+### Site URL
+🌐 **Live Site**: https://greyhatgeorgiatech.github.io

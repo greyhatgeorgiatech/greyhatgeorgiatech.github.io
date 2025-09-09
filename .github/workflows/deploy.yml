@@ -2,7 +2,7 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [ NewUpdatedWebsite ]
+    branches: [ master, main ]
   workflow_dispatch:
 
 permissions:
@@ -20,18 +20,36 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
+    
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+    - name: Checkout
+      uses: actions/checkout@v4
+      
+    - name: Setup Pages
+      uses: actions/configure-pages@v4
+      
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        cache: 'npm'
         
-      - name: Setup Pages
-        uses: actions/configure-pages@v4
+    - name: Install dependencies
+      run: npm ci
+      
+    - name: Build site
+      run: |
+        echo "Static site - ensuring all files are ready for deployment"
+        # Copy any additional files if needed
+        cp README.md ./
+        # Ensure all static files are in place
+        ls -la
         
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: '.'
-          
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+    - name: Upload artifact
+      uses: actions/upload-pages-artifact@v3
+      with:
+        path: '.'
+        
+    - name: Deploy to GitHub Pages
+      id: deployment
+      uses: actions/deploy-pages@v4
