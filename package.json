@@ -1,0 +1,16 @@
+{
+    "name": "greyhatgt.github.io",
+    "private": true,
+    "version": "0.0.0",
+    "description": "Static site for GreyHat @ GT (generated HTML).",
+    "license": "MIT",
+    "scripts": {
+        "dev": "serve -l 4000 .",
+        "start": "serve -l 4000 .",
+        "build": "echo 'Static site: no build step'",
+        "deploy": "echo 'Deploy by pushing to GitHub Pages'"
+    },
+    "devDependencies": {
+        "serve": "^14.2.3"
+    }
+}

@@ -1,0 +1,136 @@
+/* Meetings page specific styles */
+
+.meetings-hero {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 16px 10px 16px;
+}
+
+.meetings-title {
+    font-size: 56px;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    color: #fafafa;
+}
+
+.term-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 12px;
+}
+
+.term-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 14px;
+    border-radius: 9999px;
+    background: #111111;
+    border: 1px solid #262626;
+    color: #e5e7eb;
+    font-weight: 600;
+}
+
+.meetings-grid {
+    max-width: 1100px;
+    margin: 16px auto 32px auto;
+    padding: 0 16px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+}
+
+.meeting-card {
+    background: #0f0f10;
+    border: 1px solid #262626;
+    border-radius: 16px;
+    padding: 22px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 800;
+    border-radius: 9999px;
+    padding: 6px 10px;
+    font-size: 14px;
+}
+
+.badge-green {
+    background: #052e1a;
+    color: #86efac;
+    border: 1px solid #14532d;
+}
+
+.badge-blue {
+    background: #0a2640;
+    color: #93c5fd;
+    border: 1px solid #1e3a8a;
+}
+
+.badge-red {
+    background: #3b0a0a;
+    color: #fca5a5;
+    border: 1px solid #7f1d1d;
+}
+
+.badge-yellow {
+    background: #2a2306;
+    color: #fde68a;
+    border: 1px solid #854d0e;
+}
+
+.badge-purple {
+    background: #201036;
+    color: #d8b4fe;
+    border: 1px solid #6d28d9;
+}
+
+.meeting-card h3 {
+    margin-top: 14px;
+    margin-bottom: 8px;
+    font-size: 22px;
+    color: #ffffff;
+}
+
+.meeting-card p {
+    color: #d1d5db;
+}
+
+.meeting-meta {
+    margin-top: 18px;
+    font-weight: 800;
+    color: #ffffff;
+}
+
+.subscribe-row {
+    max-width: 1100px;
+    margin: 6px auto 60px auto;
+    padding: 0 16px;
+}
+
+.subscribe-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: #00e5ff;
+    color: #0b0b0b;
+    border-radius: 9999px;
+    padding: 12px 16px;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.subscribe-btn:hover {
+    background: #00b8d4;
+}
+
+.helper-text {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 16px;
+    color: #9ca3af;
+}
