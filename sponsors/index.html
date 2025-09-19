@@ -10,6 +10,11 @@
   <link rel="stylesheet" href="../css/theme-dark.css">
   <link rel="stylesheet" href="../css/sponsors.css">
   <link rel="stylesheet" href="../css/font-awesome.min.css">
+
+  <!-- PayPal SDK (only once per page, above Part 2 code) -->
+  <script 
+    src="https://www.paypal.com/sdk/js?client-id=BAAUF7Iy8qjCMytqQLJYwqiYJmVhCB7_hFlEoV66iyMrNAhG0bVguR80usVDx0Wa38L1DU6uubdlgrU2W8&components=hosted-buttons&enable-funding=venmo&currency=USD">
+  </script>
 </head>
 <body>
   <nav class="main-nav">
@@ -59,6 +64,21 @@
       <p>Specifically, we are looking for sponsors to deliver talks to students, sponsor CTF problems/prizes, and fund snacks for our meetings. We are also looking for industry partners who can help mentor advanced students through semester-long projects.</p>
       <p>Support can be given via a sponsorship or as a tax deductible gift.</p>
       <p>Please email <a href="mailto:greyhat.gt@gmail.com">greyhat.gt@gmail.com</a> for more information.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="callout">
+      <h3>Interested in making a personal donation?</h3>
+      <p>Please donate below — your contribution helps us continue running events, CTFs, and workshops for students.</p>
+      
+      <!-- PayPal Button Embed -->
+      <div id="paypal-container-QZH3MXTAWHA94"></div>
+      <script>
+        paypal.HostedButtons({
+          hostedButtonId: "QZH3MXTAWHA94",
+        }).render("#paypal-container-QZH3MXTAWHA94")
+      </script>
     </div>
   </section>
 
